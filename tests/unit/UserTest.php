@@ -16,6 +16,14 @@ class UserTest extends TestCase
         $user->setFirstName('Gabi');
 
         $this->assertEquals($user->getFirstName(),'Gabi');
+    }
 
+    public function testEmailAddressCanBeSet()
+    {
+        $user = new \App\Models\User;
+        
+        $user->setEmail('gvquiroz@gmail.com');
+        
+        $this->assertEquals($user->getEmail(),'gvquiroz@gmail.com');
     }
 }
